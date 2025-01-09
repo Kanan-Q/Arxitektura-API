@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace BlogApp.Core.Repositories.UserRepository
 {
-    public interface IUserRepository
+
+
+    public interface IUserRepository : IGenericRepository<User>
     {
-        Task AddUserAsync(User user);
-        Task<User?> GetUserByIdAsync(int id);
-        Task<IEnumerable<User>> GetAllUsersAsync();
-        void UpdateUser(User user);
-        Task RemoveUserAsync(int id);
-        Task<int> SaveAsync();
-        Task<User> GetByUsernameAsync(RegisterDto dto);
+        Task<User?> GetUserByUserNameAsync(string username);
+        Task AddUserAsync(UserCreateDto dto);
+        Task<IEnumerable<UserGetDto>> GetAllUsersAsync();
+        Task SaveAsync();
     }
 }
+

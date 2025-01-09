@@ -3865,19 +3865,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kanan\\.nuget\\packages\\": {}
+    "C:\\Users\\II novbe\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kanan\\source\\repos\\Qarisig\\BlogApp.Core\\BlogApp.Core.csproj",
+      "projectUniqueName": "C:\\Users\\II novbe\\Desktop\\Arxitektura-API\\BlogApp.Core\\BlogApp.Core.csproj",
       "projectName": "BlogApp.Core",
-      "projectPath": "C:\\Users\\kanan\\source\\repos\\Qarisig\\BlogApp.Core\\BlogApp.Core.csproj",
-      "packagesPath": "C:\\Users\\kanan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kanan\\source\\repos\\Qarisig\\BlogApp.Core\\obj\\",
+      "projectPath": "C:\\Users\\II novbe\\Desktop\\Arxitektura-API\\BlogApp.Core\\BlogApp.Core.csproj",
+      "packagesPath": "C:\\Users\\II novbe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\II novbe\\Desktop\\Arxitektura-API\\BlogApp.Core\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kanan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\II novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -3885,7 +3885,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3898,11 +3897,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3960,7 +3954,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

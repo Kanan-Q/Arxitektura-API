@@ -7,14 +7,7 @@ using System.Threading.Tasks;
 using BlogApp.BL.DTO.Category;
 namespace BlogApp.Core.Repositories.CategoryRepository
 {
-    public interface ICategoryRepository
-    {
-        Task AddCategoryAsync(Category category);
-        Task<Category?> GetCategoryByIdAsync(int id);
-        Task<IEnumerable<Category>> GetAllCategoriesAsync();
-        void UpdateCategory(Category category);
-        Task RemoveCategoryAsync(int id);
-        Task<int> SaveAsync();
-
-    }
+    public interface ICategoryRepository : IGenericRepository<Category>
+    { }
+    
 }

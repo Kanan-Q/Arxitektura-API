@@ -17,3 +17,23 @@ C:\Users\kanan\source\repos\Qarisig\BlogApp.BL\obj\Debug\net8.0\refint\BlogApp.B
 C:\Users\kanan\source\repos\Qarisig\BlogApp.BL\obj\Debug\net8.0\BlogApp.BL.pdb
 C:\Users\kanan\source\repos\Qarisig\BlogApp.BL\obj\Debug\net8.0\BlogApp.BL.genruntimeconfig.cache
 C:\Users\kanan\source\repos\Qarisig\BlogApp.BL\obj\Debug\net8.0\ref\BlogApp.BL.dll
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\bin\Debug\net8.0\BlogApp.BL.deps.json
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\bin\Debug\net8.0\BlogApp.BL.runtimeconfig.json
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\bin\Debug\net8.0\BlogApp.BL.dll
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\bin\Debug\net8.0\BlogApp.BL.pdb
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\bin\Debug\net8.0\BlogApp.Core.dll
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\bin\Debug\net8.0\BlogApp.DAL.dll
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\bin\Debug\net8.0\BlogApp.Core.pdb
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\bin\Debug\net8.0\BlogApp.DAL.pdb
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\obj\Debug\net8.0\BlogApp.BL.csproj.AssemblyReference.cache
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\obj\Debug\net8.0\BlogApp.BL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\obj\Debug\net8.0\BlogApp.BL.AssemblyInfoInputs.cache
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\obj\Debug\net8.0\BlogApp.BL.AssemblyInfo.cs
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\obj\Debug\net8.0\BlogApp.BL.csproj.CoreCompileInputs.cache
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\obj\Debug\net8.0\BlogApp.BL.sourcelink.json
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\obj\Debug\net8.0\BlogApp.BL.csproj.CopyComplete
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\obj\Debug\net8.0\BlogApp.BL.dll
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\obj\Debug\net8.0\refint\BlogApp.BL.dll
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\obj\Debug\net8.0\BlogApp.BL.pdb
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\obj\Debug\net8.0\BlogApp.BL.genruntimeconfig.cache
+C:\Users\II novbe\Desktop\Arxitektura-API\BlogApp.BL\obj\Debug\net8.0\ref\BlogApp.BL.dll

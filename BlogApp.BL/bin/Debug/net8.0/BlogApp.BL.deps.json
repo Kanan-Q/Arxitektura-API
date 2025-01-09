@@ -898,7 +898,14 @@
           }
         }
       },
-      "System.Formats.Asn1/8.0.1": {},
+      "System.Formats.Asn1/8.0.1": {
+        "runtime": {
+          "lib/net8.0/System.Formats.Asn1.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.0.724.31311"
+          }
+        }
+      },
       "System.Globalization/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -1182,10 +1189,7 @@
           "Microsoft.IdentityModel.Tokens": "8.3.0"
         },
         "runtime": {
-          "BlogApp.Core.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "BlogApp.Core.dll": {}
         }
       },
       "BlogApp.DAL/1.0.0": {
@@ -1201,10 +1205,7 @@
           "jose-jwt": "5.1.0"
         },
         "runtime": {
-          "BlogApp.DAL.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
-          }
+          "BlogApp.DAL.dll": {}
         }
       }
     }

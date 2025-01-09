@@ -10,10 +10,7 @@ namespace BlogApp.BL.Services.Interfaces
 {
     public interface IUserService
     {
-        Task<int> AddUserAsync(UserCreateDto dto);
-        Task<User?> GetUserByIdAsync(int id);
-        Task<IEnumerable<User>> GetAllUsersAsync();
-        Task UpdateUserAsync(UserUpdateDto dto);
-        Task DeleteUserAsync(int id);
+        public Task<string> CreateAsync();
+        public Task DeleteAsync(string username);
     }
 }

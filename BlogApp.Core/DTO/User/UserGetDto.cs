@@ -9,6 +9,8 @@ namespace BlogApp.BL.DTO.User
 {
     public class UserGetDto
     {
+        public object Role;
+
         public int Id { get; set; }
         public string UserName { get; set; }
         public string Fullname { get; set; }

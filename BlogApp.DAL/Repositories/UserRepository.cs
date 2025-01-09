@@ -7,32 +7,33 @@ using System;
 
 namespace BlogApp.DAL.Repositories
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository : GenericRepository<User>, IUserRepository
     {
-        private readonly AppDbContext _context;
+        readonly AppDbContext _context;
 
-        public UserRepository(AppDbContext context)
+        public UserRepository(AppDbContext context) : base(context)
         {
             _context = context;
         }
 
-        public async Task AddUserAsync(User user) => await _context.Users.AddAsync(user);
-        public async Task<User?> GetUserByIdAsync(int id) => await _context.Users.FindAsync(id);
-        public async Task<IEnumerable<User>> GetAllUsersAsync() => await _context.Users.ToListAsync();
-        public void UpdateUser(User user) => _context.Users.Update(user);
-        public async Task<int> SaveAsync() => await _context.SaveChangesAsync();
-        public async Task RemoveUserAsync(int id)
+        public async Task<User?> GetUserByUserNameAsync(string username)
         {
-            var user = await _context.Users.FindAsync(id);
-            if (user == null)
-                throw new Exception("User not found");
-
-            _context.Users.Remove(user);
+            return await _context.Users.Where(x => x.Username == username).FirstOrDefaultAsync();
+        }
+        public Task AddUserAsync(UserCreateDto dto)
+        {
+            throw new NotImplementedException();
         }
 
-        public async Task<User> GetByUsernameAsync(RegisterDto dto)
+        public Task<IEnumerable<UserGetDto>> GetAllUsersAsync()
         {
-            return await _context.Set<User>().Where(u => u.Username == dto.Username).FirstOrDefaultAsync();
+            throw new NotImplementedException();
+        }
+
+
+        Task IUserRepository.SaveAsync()
+        {
+            throw new NotImplementedException();
         }
     }
 }

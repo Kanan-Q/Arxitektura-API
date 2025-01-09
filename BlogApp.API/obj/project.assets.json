@@ -6509,19 +6509,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\kanan\\.nuget\\packages\\": {}
+    "C:\\Users\\II novbe\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kanan\\source\\repos\\Qarisig\\BlogApp.API\\BlogApp.API.csproj",
+      "projectUniqueName": "C:\\Users\\II novbe\\Desktop\\Arxitektura-API\\BlogApp.API\\BlogApp.API.csproj",
       "projectName": "BlogApp.API",
-      "projectPath": "C:\\Users\\kanan\\source\\repos\\Qarisig\\BlogApp.API\\BlogApp.API.csproj",
-      "packagesPath": "C:\\Users\\kanan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kanan\\source\\repos\\Qarisig\\BlogApp.API\\obj\\",
+      "projectPath": "C:\\Users\\II novbe\\Desktop\\Arxitektura-API\\BlogApp.API\\BlogApp.API.csproj",
+      "packagesPath": "C:\\Users\\II novbe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\II novbe\\Desktop\\Arxitektura-API\\BlogApp.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kanan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\II novbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6529,18 +6529,17 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\kanan\\source\\repos\\Qarisig\\BlogApp.BL\\BlogApp.BL.csproj": {
-              "projectPath": "C:\\Users\\kanan\\source\\repos\\Qarisig\\BlogApp.BL\\BlogApp.BL.csproj"
+            "C:\\Users\\II novbe\\Desktop\\Arxitektura-API\\BlogApp.BL\\BlogApp.BL.csproj": {
+              "projectPath": "C:\\Users\\II novbe\\Desktop\\Arxitektura-API\\BlogApp.BL\\BlogApp.BL.csproj"
             },
-            "C:\\Users\\kanan\\source\\repos\\Qarisig\\BlogApp.DAL\\BlogApp.DAL.csproj": {
-              "projectPath": "C:\\Users\\kanan\\source\\repos\\Qarisig\\BlogApp.DAL\\BlogApp.DAL.csproj"
+            "C:\\Users\\II novbe\\Desktop\\Arxitektura-API\\BlogApp.DAL\\BlogApp.DAL.csproj": {
+              "projectPath": "C:\\Users\\II novbe\\Desktop\\Arxitektura-API\\BlogApp.DAL\\BlogApp.DAL.csproj"
             }
           }
         }
@@ -6549,11 +6548,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -6618,7 +6612,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

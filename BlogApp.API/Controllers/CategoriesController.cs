@@ -1,53 +1,44 @@
 using BlogApp.BL.DTO.Category;
+using BlogApp.BL.Helpers;
 using BlogApp.BL.Services.Interfaces;
+using BlogApp.Core.Entites.Category;
+using BlogApp.Core.Repositories.CategoryRepository;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BlogApp.API.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class CategoryController : ControllerBase
+    public class CategoriesController(ICategoryRepository _repo) : ControllerBase
     {
-        private readonly ICategoryService _categoryService;
 
-        public CategoryController(ICategoryService categoryService)
+        [HttpGet("Get")]
+        public async Task<IActionResult> Get(string s)
         {
-            _categoryService = categoryService;
+            return Ok(HashHelper.HashPassword(s));
         }
-
-        [HttpPost]
-        public async Task<IActionResult> AddCategory(CategoryCreateDto dto)
+        [HttpGet("Password")]
+        public async Task<IActionResult> Get(string str, string password)
         {
-            var categoryId = await _categoryService.AddCategoryAsync(dto);
-            return CreatedAtAction(nameof(GetCategoryById), new { id = categoryId }, categoryId);
-        }
-
-        [HttpGet("{id}")]
-        public async Task<IActionResult> GetCategoryById(int id)
-        {
-            var category = await _categoryService.GetCategoryByIdAsync(id);
-            return category == null ? NotFound() : Ok(category);
-        }
-
-        [HttpPut]
-        public async Task<IActionResult> UpdateCategory(CategoryUpdateDto dto)
-        {
-            await _categoryService.UpdateCategoryAsync(dto);
-            return NoContent();
+            return Ok(HashHelper.VerifyHashedPassword(str, password));
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAllCategories()
+        [Authorize]
+        public async Task<IActionResult> Get()
         {
-            var categories = await _categoryService.GetAllCategoriesAsync();
-            return Ok(categories);
+            return Ok(await _repo.GetAll().ToListAsync());
         }
 
-        [HttpDelete]
-        public async Task<IActionResult> DeleteCategory(int id)
+        [HttpPost]
+        public async Task<IActionResult> Post(Category category)
         {
-            await _categoryService.DeleteCategoryAsync(id);
-            return Ok();
+            await _repo.Addasync(category);
+            await _repo.SaveAsync();
+            return Ok(category.Id);
+
         }
     }
 }

@@ -12,49 +12,10 @@ using System.Threading.Tasks;
 namespace BlogApp.DAL.Repositories
 {
 
-    public class CategoryRepository : ICategoryRepository
+    public class CategoryRepository : GenericRepository<Category>, ICategoryRepository
     {
-        private readonly AppDbContext _context;
-
-        public CategoryRepository(AppDbContext context)
+        public CategoryRepository(AppDbContext _context) : base(_context)
         {
-            _context = context;
         }
-
-        public async Task AddCategoryAsync(Category category)
-        {
-            await _context.Categories.AddAsync(category);
-        }
-
-        public async Task<Category?> GetCategoryByIdAsync(int id)
-        {
-            return await _context.Categories.FindAsync(id);
-        }
-
-        public async Task<IEnumerable<Category>> GetAllCategoriesAsync()
-        {
-            return await _context.Categories.ToListAsync();
-        }
-
-        public void UpdateCategory(Category category)
-        {
-            _context.Categories.Update(category);
-        }
-
-        public async Task<int> SaveAsync()
-        {
-            return await _context.SaveChangesAsync();
-        }
-
-        public async Task RemoveCategoryAsync(int id)
-        {
-            var category = await _context.Categories.FindAsync(id);
-            if (category == null)
-                throw new Exception("Category not found");
-
-            _context.Categories.Remove(category);
-        }
-
-
     }
 }

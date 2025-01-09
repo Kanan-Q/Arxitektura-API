@@ -1,4 +1,5 @@
-﻿using BlogApp.Core.Entites.Common;
+﻿using BlogApp.BL.DTO.Category;
+using BlogApp.Core.Entites.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,10 @@ namespace BlogApp.Core.Entites.Category
     {
         public string Name {  get; set; }
         public string Icon {  get; set; }
+
+        public static implicit operator Category(CategoryCreateDto v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

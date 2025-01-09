@@ -12,76 +12,26 @@ using System.Threading.Tasks;
 
 namespace BlogApp.BL.Services.Implements
 {
-    public class CategoryService : ICategoryService
+
+    public class CategoryService(ICategoryRepository _repo) : ICategoryService
     {
-        private readonly ICategoryRepository _repo;
-
-        public CategoryService(ICategoryRepository repo)
+        public async Task<int> CreateAsync(CategoryCreateDto dto)
         {
-            _repo = repo;
-        }
-
-        public async Task<int> AddCategoryAsync(CategoryCreateDto dto)
-        {
-            var category = new Category
-            {
-                Name = dto.Name,
-                Icon = dto.Icon
-            };
-
-            await _repo.AddCategoryAsync(category);
+            Category cat = dto;
+            await _repo.Addasync(cat);
             await _repo.SaveAsync();
-            return category.Id;
+            return cat.Id;
+
         }
 
-        public async Task<Category?> GetCategoryByIdAsync(int id)
+        public async Task<IEnumerable<CategoryGetDto>> GetAllAsync()
         {
-            var category = await _repo.GetCategoryByIdAsync(id);
-            if (category == null) return null;
-
-            return new Category
+            return await _repo.GetAll().Select(x => new CategoryGetDto
             {
-                Id = category.Id,
-                Name = category.Name,
-                Icon = category.Icon
-            };
+                Id = x.Id,
+                Name = x.Name,
+            }).ToListAsync();
         }
-
-        public async Task<IEnumerable<Category>> GetAllCategoriesAsync()
-        {
-            var categories = await _repo.GetAllCategoriesAsync();
-            return categories.Select(c => new Category
-            {
-                Id = c.Id,
-                Name = c.Name,
-                Icon = c.Icon
-            });
-        }
-
-        public async Task UpdateCategoryAsync(CategoryUpdateDto dto)
-        {
-            var category = await _repo.GetCategoryByIdAsync(dto.Id);
-            if (category == null) throw new Exception("Category not found");
-
-            category.Name = dto.Name;
-            category.Icon = dto.Icon;
-
-            _repo.UpdateCategory(category);
-            await _repo.SaveAsync();
-        }
-
-
-        public async Task DeleteCategoryAsync(int id)
-        {
-            var category = await _repo.GetCategoryByIdAsync(id);
-            if (category == null)
-                throw new Exception("Category not found");
-
-            await _repo.RemoveCategoryAsync(id);
-            await _repo.SaveAsync();
-        }
-
-
     }
 }
 
